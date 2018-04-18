@@ -48,7 +48,11 @@ Introductory Evaluations Slideshow
             </div>
           </div>
 
-        <h4>{% if m['freshman_project'] != 'Pending' %}<span class="icon glyphicon glyphicon-{% if m['freshman_project'] == 'Passed' %}ok passed{%else%}remove{% endif %}" aria-hidden="true"></span> Freshman Project{% endif %}</h4>
+        <h4>
+            {% if m['freshman_project'] != 'Pending' %}
+                <span class="icon glyphicon glyphicon-{% if m['freshman_project'] == 'Passed' %}ok passed{%else%}remove{% endif %}" aria-hidden="true"></span> Freshman Project
+            {% endif %}
+        </h4>
 
         <div class="actions" data-uid="{{m['uid']}}" data-cn="{{m['name']}}">
           <button class="pass" type="button">Pass</button>
