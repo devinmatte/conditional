@@ -8,8 +8,8 @@ House Meeting Attendance
     <div style="padding-top:20px"></div>
     <form data-module="hmForm">
         <!-- Date -->
-        <div class="panel panel-default">
-            <div class="panel-body" style="padding-top:10px;">
+        <div class="card">
+            <div class="card-body" style="padding-top:10px;">
                 <div class="form-group is-empty">
                     <label for="date" class=" control-label">Date</label>
                     <input type="text" name="date" class="form-control" value="{{ date }}" data-module="datepicker" />
@@ -17,11 +17,11 @@ House Meeting Attendance
             </div>
         </div>
         <!-- Attendees -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Attendees</h3>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Attendees</h3>
             </div>
-            <div class="panel-body table-fill">
+            <div class="card-body table-fill">
                 <div class="hm-search">
                     <input class="form-control" type="text" placeholder="Quick Select" data-module="hmSearch" data-target="table.hm-attendance">
                 </div>

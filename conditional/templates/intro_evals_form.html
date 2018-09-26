@@ -8,16 +8,16 @@ Introductory Evaluations Form
     {% if is_open %}
     <div style="padding-top:20px"></div>
     <form data-module="introEvalsForm">
-        <div class="panel panel-default">
-            <div class="panel-body" style="padding-top:20px;">
+        <div class="card">
+            <div class="card-body" style="padding-top:20px;">
                 <div class="form-group label-floating is-empty">
                     <label class="control-label" for="social_events">Social Events</label>
                     <textarea name="social_events" class="form-control" rows="6" id="social_events">{{social_events}}</textarea>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-body" style="padding-top:20px;">
+        <div class="card">
+            <div class="card-body" style="padding-top:20px;">
                 <div class="form-group label-floating is-empty">
                     <label class="control-label" for="comments">Comments</label>
                     <textarea name="comments" class="form-control" rows="6" id="comments">{{other_notes}}</textarea>

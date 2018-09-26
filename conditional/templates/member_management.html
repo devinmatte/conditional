@@ -4,11 +4,11 @@ Administration
 {% endblock %}
 {% block body %}
 <div class="container main">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Administration</h3>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Administration</h3>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
             <div class="container-fluid">
                 <div class="col-xs-6 col-sm-2">
                     <div class="stat-number">{{num_current}}</div>
@@ -47,11 +47,11 @@ Administration
         </div>
     </div>
     {% if co_op and is_eval_director%}
-       <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Co-Op Management</h3>
+       <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Co-Op Management</h3>
         </div>
-        <div class="panel-body table-fill">
+        <div class="card-body table-fill">
             <div class="table-responsive">
                 <table class="table table-striped no-bottom-margin" data-module="table" data-searchable="false" data-sort-column="1" data-sort-order="asc" data-length-changable="true" data-paginated="false">
                     <thead>
@@ -85,11 +85,11 @@ Administration
     {% endif %}
 
     {% if is_eval_director %}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Add Users</h3>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Add Users</h3>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 remove-padding">
@@ -133,11 +133,11 @@ Administration
     {% if freshmen|length == 0 %}
     <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign white" style="padding-right:5px"> </span> There are currently no freshman accounts.</div>
     {% else %}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Freshman Management</h3>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Freshman Management</h3>
         </div>
-        <div class="panel-body table-fill">
+        <div class="card-body table-fill">
             <div class="table-responsive">
                 <table class="table table-striped no-bottom-margin" data-module="table" data-searchable="true" data-sort-column="0" data-sort-order="asc" data-length-changable="true"{% if freshmen|length < 11 %} data-paginated="false" {% endif %}>
                     <thead>
@@ -169,9 +169,9 @@ Administration
     {% endif %}
     {% endif %}
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">
                 Member Management
                 <a href="/manage/export_active_list">
                     <button type="button" class="btn btn-primary btn-sm btn-conditional pull-right">
@@ -180,7 +180,7 @@ Administration
                 </a>
             </h3>
         </div>
-        <div class="panel-body table-fill">
+        <div class="card-body table-fill">
             <div class="table-responsive">
                 <table class="table table-striped no-bottom-margin" data-module="table" data-searchable="true" data-sort-column="0" data-sort-order="asc" data-length-changable="true">
                     <thead>

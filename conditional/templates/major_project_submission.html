@@ -7,8 +7,8 @@ Major Project Form
 <div class="container main">
     <h3 class="page-title">Major Project Form</h3>
     <form data-module="majorProjectForm">
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card">
+            <div class="card-body">
                 <div class="form-group label-floating is-empty">
                     <label class="control-label" for="name">Project Name</label>
                     <input class="form-control" id="name" name="name" type="text" maxlength="64"
@@ -16,8 +16,8 @@ Major Project Form
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-body" style="padding-top:20px;">
+        <div class="card">
+            <div class="card-body" style="padding-top:20px;">
                 <div class="form-group label-floating is-empty">
                     <label class="control-label" for="description">Description</label>
                     <textarea name="description" class="form-control" rows="3" id="description"
@@ -28,16 +28,16 @@ Major Project Form
         <input class="btn btn-raised btn-primary" style="width:100%;margin-bottom:20px;" type="submit" value="Submit Major Project">
     </form>
     <h3 class="page-title">All Major Projects</h3> {% if major_projects_len
-    <=0 %} <div class="panel panel-default">
-        <div class="panel-body">
+    <=0 %} <div class="card">
+        <div class="card-body">
             <p class="text-center">No Pending Major Projects</p>
         </div>
 </div>
 {% else %}
 
     {% for p in major_projects %}
-    <div class="panel panel-default">
-        <div class="panel-body">
+    <div class="card">
+        <div class="card-body">
             <div class="col-xs-8 col-sm-10">
                 <h4>{{p['proj_name']}}</h4>
                 <img class="table-img" src="https://profiles.csh.rit.edu/image/{{p['username']}}">

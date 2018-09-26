@@ -7,8 +7,8 @@ Attendance History
     {% if pending_cm|length != 0 and current_page == 1 %}
     <h3 class="page-title">Pending Submissions</h3>
     {% for meeting in pending_cm %}
-    <div class="panel panel-default">
-        <div class="panel-body eval-panel">
+    <div class="card">
+        <div class="card-body eval-panel">
             <div class="container-fluid">
             	<div class="col-xs-12 col-sm-3 vcenter">
             		<h5>{{meeting["name"]}}</h5>
@@ -34,8 +34,8 @@ Attendance History
     {% if pending_ts|length != 0 and current_page == 1 %}
     <h3 class="page-title">Pending Seminars</h3>
     {% for seminar in pending_ts %}
-    <div class="panel panel-default">
-        <div class="panel-body eval-panel">
+    <div class="card">
+        <div class="card-body eval-panel">
             <div class="container-fluid">
             	<div class="col-xs-12 col-sm-3 vcenter">
             		<h5>{{seminar["name"]}}</h5>
@@ -60,8 +60,8 @@ Attendance History
     {% endif %}
     <h3 class="page-title">Attendance History</h3>
     {% for meeting in history %}
-    <div class="panel panel-default">
-        <div class="panel-body eval-panel">
+    <div class="card">
+        <div class="card-body eval-panel">
             <div class="container-fluid">
             	<div class="col-xs-12 col-sm-3 vcenter">
             		<h5>{{meeting["name"]}}</h5>
