@@ -2,18 +2,13 @@
 {% block nav %}
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/dashboard"></a>
-        </div>
+        <a class="navbar-brand" href="/dashboard"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
+                <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-stats"></span> Evals <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/intro_evals"><span class="glyphicon glyphicon-star"></span> Introductory Evaluations</a></li>
@@ -21,7 +16,7 @@
                         <li><a href="/conditionals"><span class="glyphicon glyphicon-exclamation-sign"></span> Current Conditionals</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
+                <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Forms <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/major_project"><span class="glyphicon glyphicon-star"></span> Major Project</a></li>
@@ -34,7 +29,7 @@
 
                 <li><a href="/housing"><span class="glyphicon glyphicon-home"></span> Housing</a></li>
 
-                <li class="dropdown">
+                <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-ok"></span> Attendance
                     {% if is_eboard and pending_review != 0 %}
                     ({{pending_review}})
@@ -53,7 +48,7 @@
                 </li>
 
                 {% if is_eboard or is_rtp%}
-                <li class="dropdown">
+                <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-wrench"></span> Admin<span class="caret"></span></a>
                     <ul class="dropdown-menu">
 
@@ -84,7 +79,7 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown navbar-user">
+                <li class="nav-item dropdown navbar-user">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <img src="https://profiles.csh.rit.edu/image/{{username}}">
                         {{username}}
@@ -106,7 +101,7 @@
 {% if admin_warning %}
 <div class="container">
     <div class="alert alert-warning alert-admin" role="alert">
-        <strong>Conditional is in lockdown!</strong> Data shown relating to any on-going evaluation is confidential, do not disclose any information to anyone. 
+        <strong>Conditional is in lockdown!</strong> Data shown relating to any on-going evaluation is confidential, do not disclose any information to anyone.
     </div>
 </div>
 {% endif %}
