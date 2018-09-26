@@ -29,7 +29,6 @@
     "bootstrap-material-datetimepicker": "https://github.com/T00rk/bootstrap-material-datetimepicker.git#gh-pages",
     "bootstrap-sass": "^3.3.6",
     "bootstrap-sweetalert": "^1.0.1",
-    "csh-material-bootstrap": "4.0.0-beta.3",
     "datatables.net": "^1.10.12",
     "datatables.net-bs": "^1.10.12",
     "dropzone": "^4.3.0",
