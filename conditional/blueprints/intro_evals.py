@@ -53,6 +53,14 @@ def display_intro_evals(internal=False, user_dict=None):
                       ).filter(
                           FreshmanHouseMeetingAttendance.attendance_status == "Absent"
                       )]
+        freshman_data = FreshmanEvalData.query.filter(
+            FreshmanEvalData.eval_date > start_of_year(),
+            FreshmanEvalData.uid == fid.id).first()
+
+        if freshman_data is None:
+            continue
+        elif freshman_data.freshman_eval_result != "Pending" and internal:
+            continue
 
         if fid.signatures_missed is None:
             signatures_missed = -1
@@ -87,11 +95,11 @@ def display_intro_evals(internal=False, user_dict=None):
                             if TechnicalSeminar.query.filter(TechnicalSeminar.id == a.seminar_id).first().approved]
                     ))
                  ],
-            'social_events': '',
-            'freshman_project': "Pending",
-            'comments': "",
+            'social_events': freshman_data.social_events,
+            'freshman_project': freshman_data.freshman_project,
+            'comments': freshman_data.other_notes,
             'ldap_account': False,
-            'status': "Pending"
+            'status': freshman_data.freshman_eval_result
         }
         ie_members.append(freshman)
 
